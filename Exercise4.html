@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+</head>
+<body class="bg-light">
+	<main id="body" class="py-5">
+	</main>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script>
+		var body = document.getElementById("body");
+		var form = document.createElement("form");
+			//form.setAttribute('action', "URL..."),
+			//form.setAttribute('enctype', "application/x-www-form-urlencoded"),
+			//form.setAttribute('target', "_blank"),
+			form.setAttribute('method', "POST"),
+			form.setAttribute('class', "g-0");
+			//form.onsubmit = function () { submitFunction() };
+			form.addEventListener('submit', (e) => submitFunction(e)); // submit handler
+
+			var container = document.createElement("div");
+				container.setAttribute('class', "container");
+
+				var row = document.createElement("div");
+					row.setAttribute('class', "row");
+
+					var col = document.createElement("div");
+						col.setAttribute('class', "col-12 mb-3");
+
+						var input = document.createElement("input");
+							input.setAttribute('type', "text"), //I dont know what an npi is, so i cant match UI for data type
+							input.setAttribute('class', 'form-control'),
+							input.setAttribute('id', "npi"),
+							input.setAttribute('name', "npi"),
+							input.setAttribute('placeholder', "NPI Number");
+
+						var label = document.createElement("label");
+							label.setAttribute('class', 'form-label'),
+							label.setAttribute('for', input.name);
+							label.appendChild(document.createTextNode('NPI number'));
+
+						col.appendChild(label);
+						col.appendChild(input);
+					row.appendChild(col);
+
+						col = document.createElement("div");
+						col.setAttribute('class', "col-md-6 mb-3");
+
+							input = document.createElement("input");
+							input.setAttribute('type', "email"),
+							input.setAttribute('class', 'form-control'),
+							input.setAttribute('id', "email"),
+							input.setAttribute('name', "email"),
+							input.setAttribute('placeholder', "Email");
+
+							label = document.createElement("label");
+							label.setAttribute('class', 'form-label'),
+							label.setAttribute('for', input.name);
+							label.appendChild(document.createTextNode('Email'));
+
+						col.appendChild(label);
+						col.appendChild(input);
+					row.appendChild(col);
+
+						col = document.createElement("div");
+						col.setAttribute('class', "col-md-6 mb-3");
+
+							input = document.createElement("input");
+							input.setAttribute('type', "text"),
+							input.setAttribute('class', 'form-control'),
+							input.setAttribute('id', "telephone"),
+							input.setAttribute('name', "telephone"),
+							input.setAttribute('placeholder', "Telephone");
+
+							label = document.createElement("label");
+							label.setAttribute('class', 'form-label'),
+							label.setAttribute('for', input.name);
+							label.appendChild(document.createTextNode('Telephone'));
+
+						col.appendChild(label);
+						col.appendChild(input);
+					row.appendChild(col);
+
+						col = document.createElement("div");
+						col.setAttribute('class', "col-md-6 mb-3");
+
+							input = document.createElement("input");
+							input.setAttribute('type', "text"),
+							input.setAttribute('class', 'form-control'),
+							input.setAttribute('id', "firstname"),
+							input.setAttribute('name', "firstname"),
+							input.setAttribute('placeholder', "First Name");
+
+							label = document.createElement("label");
+							label.setAttribute('class', 'form-label'),
+							label.setAttribute('for', input.name);
+							label.appendChild(document.createTextNode('First Name'));
+
+						col.appendChild(label);
+						col.appendChild(input);
+					row.appendChild(col);
+
+						col = document.createElement("div");
+						col.setAttribute('class', "col-md-6 mb-3");
+
+							input = document.createElement("input");
+							input.setAttribute('type', "text"),
+							input.setAttribute('class', 'form-control'),
+							input.setAttribute('id', "lastname"),
+							input.setAttribute('name', "lastname"),
+							input.setAttribute('placeholder', "Last Name");
+
+							label = document.createElement("label");
+							label.setAttribute('class', 'form-label'),
+							label.setAttribute('for', input.name);
+							label.appendChild(document.createTextNode('Last Name'));
+
+						col.appendChild(label);
+						col.appendChild(input);
+					row.appendChild(col);
+
+						col = document.createElement("div");
+						col.setAttribute('class', "col-12 mb-3");
+
+							input = document.createElement("input");
+							input.setAttribute('type', "text"),
+							input.setAttribute('class', 'form-control'),
+							input.setAttribute('id', "address1"),
+							input.setAttribute('name', "address1"),
+							input.setAttribute('placeholder', "1234 Main St");
+
+							label = document.createElement("label");
+							label.setAttribute('class', 'form-label'),
+							label.setAttribute('for', input.name);
+							label.appendChild(document.createTextNode('Address'));
+
+						col.appendChild(label);
+						col.appendChild(input);
+					row.appendChild(col);
+
+						col = document.createElement("div");
+						col.setAttribute('class', "col-12 mb-3");
+
+							input = document.createElement("input");
+							input.setAttribute('type', "text"),
+							input.setAttribute('class', 'form-control'),
+							input.setAttribute('id', "address2"),
+							input.setAttribute('name', "address2"),
+							input.setAttribute('placeholder', "Apartment, studio, or floor");
+
+							label = document.createElement("label");
+							label.setAttribute('class', 'form-label'),
+							label.setAttribute('for', input.name);
+							label.appendChild(document.createTextNode('Address 2'));
+
+						col.appendChild(label);
+						col.appendChild(input);
+					row.appendChild(col);
+
+						col = document.createElement("div");
+						col.setAttribute('class', "col-md-6 mb-3");
+
+							input = document.createElement("input");
+							input.setAttribute('type', "text"),
+							input.setAttribute('class', 'form-control'),
+							input.setAttribute('id', "city"),
+							input.setAttribute('name', "city"),
+							input.setAttribute('placeholder', "City");
+
+							label = document.createElement("label");
+							label.setAttribute('class', 'form-label'),
+							label.setAttribute('for', input.name);
+							label.appendChild(document.createTextNode('City'));
+
+						col.appendChild(label);
+						col.appendChild(input);
+					row.appendChild(col);
+
+						col = document.createElement("div");
+						col.setAttribute('class', "col-md-4 mb-3");
+
+							input = document.createElement("select");
+							//input.setAttribute('type', "select"),
+							input.setAttribute('class', 'form-control'),
+							input.setAttribute('id', "state"),
+							input.setAttribute('name', "state"),
+							input.setAttribute('placeholder', "State");
+
+							var states = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
+							var option = document.createElement("option");
+								option.setAttribute('selected', "selected");
+								option.appendChild(document.createTextNode('Choose...'));
+								input.appendChild(option);
+							for (state = 0; state < states.length; state++) {
+								option = document.createElement("option");
+								option.appendChild(document.createTextNode(states[state]));
+								input.appendChild(option);
+							}
+
+							label = document.createElement("label");
+							label.setAttribute('class', 'form-label'),
+							label.setAttribute('for', input.name);
+							label.appendChild(document.createTextNode('State'));
+
+						col.appendChild(label);
+						col.appendChild(input);
+					row.appendChild(col);
+
+						col = document.createElement("div");
+						col.setAttribute('class', "col-md-2 mb-3");
+
+							input = document.createElement("input");
+							input.setAttribute('type', "text"),
+							input.setAttribute('class', 'form-control'),
+							input.setAttribute('id', "zip"),
+							input.setAttribute('name', "zip"),
+							input.setAttribute('placeholder', "Zip");
+
+							label = document.createElement("label");
+							label.setAttribute('class', 'form-label'),
+							label.setAttribute('for', input.name);
+							label.appendChild(document.createTextNode('Zip'));
+
+						col.appendChild(label);
+						col.appendChild(input);
+					row.appendChild(col);
+
+						col = document.createElement("div");
+						col.setAttribute('class', "col-md-2");
+
+							input = document.createElement("button");
+							input.setAttribute('type', "submit"),
+							input.setAttribute('class', 'btn btn-primary'),
+							input.appendChild(document.createTextNode('Submit'));
+
+						col.appendChild(input);
+					row.appendChild(col);
+				container.appendChild(row);
+			form.appendChild(container);
+		body.appendChild(form);
+
+		function submitFunction(_event) {
+			// on form submission, prevent default
+			_event.preventDefault();
+
+			console.log(form.querySelector('input[name="firstname"]')); // FOO
+			console.log(form.querySelector('input[name="lastname"]')); // BAR
+
+			// construct a FormData object, which fires the formdata event
+			const formData = new FormData(form);
+			// formdata gets modified by the formdata event
+			console.log(formData.get('firstname')); // foo
+			console.log(formData.get('lastname')); // bar
+
+			var fname = document.getElementById("firstname").value;
+			var lname = document.getElementById("lastname").value;
+			var npi = document.getElementById("npi").value;
+			var phone = document.getElementById("telephone").value;
+			var email = document.getElementById("email").value;
+			//reassemble address into string for validation
+			var address = document.getElementById("address1").value;
+			alert(JSON.stringify({
+				"Name": fname,// + " " lname
+				"ToDo": "remaining values..."
+			}));
+			//return false;
+		}
+	</script>
+</body>
+</html>
